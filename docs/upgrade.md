@@ -23,12 +23,12 @@ To start reindexing add `reindex=1` during the **first startup only**.
 **Before**:
 ```json
 {
-  "datadir": "/home/<username>/.litecoin",
+  "datadir": "/home/<username>/.sumcoin",
   "network": "livenet",
   "port": 3001,
   "services": [
     "address",
-    "litecoind",
+    "sumcoind",
     "db",
     "web"
   ]
@@ -41,14 +41,14 @@ To start reindexing add `reindex=1` during the **first startup only**.
   "network": "livenet",
   "port": 3001,
   "services": [
-    "litecoind",
+    "sumcoind",
     "web"
   ],
   "servicesConfig": {
-    "litecoin": {
+    "sumcoin": {
       "spawn": {
-        "datadir": "/home/<username>/.litecoin",
-        "exec": "/home/<username>/sumcore-node/bin/litecoind"
+        "datadir": "/home/<username>/.sumcoin",
+        "exec": "/home/<username>/sumcore-node/bin/sumcoind"
       }
     }
   }

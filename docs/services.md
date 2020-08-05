@@ -44,12 +44,12 @@ var myNode = new sumcore.Node({
   network: 'regtest'
   services: [
     {
-      name: 'litecoind',
+      name: 'sumcoind',
       module: Litecoin,
       config: {
         spawn: {
-          datadir: '/home/<username>/.litecoin',
-          exec: '/home/<username>/sumcore-node/bin/litecoind'
+          datadir: '/home/<username>/.sumcoin',
+          exec: '/home/<username>/sumcore-node/bin/sumcoind'
         }
       }
     },

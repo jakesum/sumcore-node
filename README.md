@@ -5,7 +5,7 @@ Sumcore Node
 [![Build Status](https://img.shields.io/travis/sumcoinlabs/sumcore-node.svg?branch=master&style=flat-square)](https://travis-ci.org/sumcoinlabs/sumcore-node)
 [![Coverage Status](https://img.shields.io/coveralls/sumcoinlabs/sumcore-node.svg?style=flat-square)](https://coveralls.io/r/sumcoinlabs/sumcore-node)
 
-A Litecoin full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Litecoin Core with additional indexing](https://github.com/sumcoinlabs/sumcore-litecoin) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Litecoin full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Litecoin Core with additional indexing](https://github.com/sumcoinlabs/sumcore-sumcoin) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
@@ -14,7 +14,7 @@ npm install -g sumcore-node
 sumcore-node start
 ```
 
-Note: For your convenience, we distribute bitcoind binaries for x86_64 Linux and x86_64 Mac OS X. Upon npm install, the binaries for your platform will be downloaded. For more detailed installation instructions, or if you want to compile the project yourself, then please see the Bitcore branch of [Litecoin Core with additional indexing](https://github.com/sumcoinlabs/sumcore-litecoin).
+Note: For your convenience, we distribute bitcoind binaries for x86_64 Linux and x86_64 Mac OS X. Upon npm install, the binaries for your platform will be downloaded. For more detailed installation instructions, or if you want to compile the project yourself, then please see the Bitcore branch of [Litecoin Core with additional indexing](https://github.com/sumcoinlabs/sumcore-sumcoin).
 
 ## Prerequisites
 

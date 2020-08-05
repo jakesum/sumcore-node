@@ -18,14 +18,14 @@ git clone git@github.com:<yourusername>/sumcore-node.git
 git clone git@github.com:<yourusername>/sumcore-lib.git
 ```
 
-To develop litecoin or to compile from source:
+To develop sumcoin or to compile from source:
 
 ```bash
-git clone git@github.com:<yourusername>/litecoin.git
+git clone git@github.com:<yourusername>/sumcoin.git
 git fetch origin <branchname>:<branchname>
 git checkout <branchname>
 ```
-**Note**: See litecoin documentation for building litecoin on your platform.
+**Note**: See sumcoin documentation for building sumcoin on your platform.
 
 
 ## Install Development Dependencies
@@ -51,7 +51,7 @@ npm install
 cd ../sumcore-node
 npm install
 ```
-**Note**: If you get a message about not being able to download litecoin distribution, you'll need to compile litecoind from source, and setup your configuration to use that version.
+**Note**: If you get a message about not being able to download sumcoin distribution, you'll need to compile sumcoind from source, and setup your configuration to use that version.
 
 
 We now will setup symlinks in `sumcore-node` *(repeat this for any other modules you're planning on developing)*:
@@ -63,10 +63,10 @@ rm -rf bitcoind-rpc
 ln -s ~/bitcoind-rpc
 ```
 
-And if you're compiling or developing litecoin:
+And if you're compiling or developing sumcoin:
 ```bash
 cd ../bin
-ln -sf ~/litecoin/src/litecoind
+ln -sf ~/sumcoin/src/sumcoind
 ```
 
 ## Run Tests
@@ -112,17 +112,17 @@ Edit `sumcore-node.json` with something similar to:
   "network": "livenet",
   "port": 3001,
   "services": [
-    "litecoind",
+    "sumcoind",
     "web",
     "insight-api",
     "insight-ui",
     "<additional_service>"
   ],
   "servicesConfig": {
-    "litecoind": {
+    "sumcoind": {
       "spawn": {
-        "datadir": "/home/<youruser>/.litecoin",
-        "exec": "/home/<youruser>/litecoin/src/litecoind"
+        "datadir": "/home/<youruser>/.sumcoin",
+        "exec": "/home/<youruser>/sumcoin/src/sumcoind"
       }
     }
   }
@@ -141,7 +141,7 @@ ln -s ~/insight-api
 ln -s ~/insight-ui
 ```
 
-Make sure that the `<datadir>/litecoin.conf` has the necessary settings, for example:
+Make sure that the `<datadir>/sumcoin.conf` has the necessary settings, for example:
 ```
 server=1
 whitelist=127.0.0.1
@@ -152,7 +152,7 @@ spentindex=1
 zmqpubrawtx=tcp://127.0.0.1:29332
 zmqpubhashblock=tcp://127.0.0.1:29332
 rpcallowip=127.0.0.1
-rpcuser=litecoin
+rpcuser=sumcoin
 rpcpassword=local321
 ```
 
