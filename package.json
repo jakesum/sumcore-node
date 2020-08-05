@@ -1,6 +1,6 @@
 {
   "name": "sumcore-node",
-  "description": "Full node with extended capabilities using Sumcore and Litecoin Core",
+  "description": "Full node with extended capabilities using Sumcore and Sumcoin Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.11",
   "main": "./index.js",

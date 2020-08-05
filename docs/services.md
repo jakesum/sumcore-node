@@ -45,7 +45,7 @@ var myNode = new sumcore.Node({
   services: [
     {
       name: 'sumcoind',
-      module: Litecoin,
+      module: Sumcoin,
       config: {
         spawn: {
           datadir: '/home/<username>/.sumcoin',
