@@ -332,12 +332,12 @@ describe('Bitcoin Service', function() {
       bitcoind.subscriptions.address[testAddr] = [emitter1, emitter2];
       bitcoind.subscriptions.address['LWx1jmpcMAQMXou6pbLyfMU7zETnbhy3bo'] = [emitter1, emitter2];
       bitcoind.subscriptions.address['mgY65WSfEmsyYaYPQaXhmXMeBhwp4EcsQW'] = [emitter2];
-      bitcoind.subscriptions.address['MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ'] = [emitter1];
+      bitcoind.subscriptions.address['2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5'] = [emitter1];
       bitcoind.unsubscribeAddress(emitter1);
       bitcoind.subscriptions.address[testAddr].length.should.equal(1);
       bitcoind.subscriptions.address['LWx1jmpcMAQMXou6pbLyfMU7zETnbhy3bo'].length.should.equal(1);
       bitcoind.subscriptions.address['mgY65WSfEmsyYaYPQaXhmXMeBhwp4EcsQW'].length.should.equal(1);
-      should.not.exist(bitcoind.subscriptions.address['MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ']);
+      should.not.exist(bitcoind.subscriptions.address['2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5']);
     });
   });
 
@@ -3318,32 +3318,32 @@ describe('Bitcoin Service', function() {
     it('will get address strings from bitcore addresses', function() {
       var addresses = [
         bitcore.Address('LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR'),
-        bitcore.Address('MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ'),
+        bitcore.Address('2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5'),
       ];
       var bitcoind = new BitcoinService(baseConfig);
       var strings = bitcoind._getAddressStrings(addresses);
       strings[0].should.equal('LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR');
-      strings[1].should.equal('MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ');
+      strings[1].should.equal('2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5');
     });
     it('will get address strings from strings', function() {
       var addresses = [
         'LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR',
-        'MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ',
+        '2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5',
       ];
       var bitcoind = new BitcoinService(baseConfig);
       var strings = bitcoind._getAddressStrings(addresses);
       strings[0].should.equal('LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR');
-      strings[1].should.equal('MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ');
+      strings[1].should.equal('2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5');
     });
     it('will get address strings from mixture of types', function() {
       var addresses = [
         bitcore.Address('LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR'),
-        'MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ',
+        '2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5',
       ];
       var bitcoind = new BitcoinService(baseConfig);
       var strings = bitcoind._getAddressStrings(addresses);
       strings[0].should.equal('LUVKqDPPVBQcjUwt1S21Pa5ybgPaDEZhXR');
-      strings[1].should.equal('MJZWZqmykQ32rvH8vUnW9jEPbyGg7agWQZ');
+      strings[1].should.equal('2PqoxVaTrs2j7a5BRcFnyyoQo8ZQMnpdBF5');
     });
     it('will give error with unknown', function() {
       var addresses = [
